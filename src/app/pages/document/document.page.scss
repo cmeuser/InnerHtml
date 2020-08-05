@@ -1,0 +1,648 @@
+:host {
+
+  .document {
+    margin: 0px 20px 5px 20px;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+
+  body {
+    word-wrap: break-word;
+    font-family: verdana;
+  }
+
+  div,
+  span {
+    margin: 0;
+
+    // Account for the notch on iOS < 11.2
+    padding-top: constant(safe-area-inset-top);
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-left: constant(safe-area-inset-left);
+    padding-right: constant(safe-area-inset-right);
+
+    // Account for the notch on iOS 11.2 and greater
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+
+    border: 0;
+    vertical-align: baseline;
+  }
+
+  // Overall doc styles
+  .layoutDocView .layoutContentHeader .lx-doc-metadata .lx-doctitle {
+    margin-right: 18px;
+    text-align: center;
+  }
+
+
+
+  h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  table {
+    display: table;
+    border-collapse: separate;
+  }
+
+  .R {
+    border-right: 1px solid #ccc;
+  }
+
+  .B {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .SS_DataTable td {
+    padding: 0.1em 0.3em;
+  }
+
+  table.T {
+    margin-top: 1em;
+  }
+
+  .L {
+    border-left: 1px solid #ccc;
+  }
+
+  .T {
+    border-top: 1px solid #ccc;
+  }
+
+  .SS_DataTable {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.5em;
+    color: #333;
+    border-spacing: 0;
+    font-size: 0.85em;
+  }
+
+  .SS_Scroll_Table {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .SS_DocumentHeader {
+    padding-top: 1em;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1em;
+    width: 100%;
+  }
+
+  .SS_DocumentInfo {
+    color: #0077cc;
+  }
+
+  .SS_CenterAlign {
+    text-align: center;
+  }
+
+  .SS_ReporterAlign {
+  }
+
+  .SS_bf {
+    font-weight: bold;
+  }
+
+  .SS_LeftAlign {
+    text-align: left;
+    font-family: verdana;
+  }
+
+  .SS_RptrLine {
+    color: #cccccc;
+    speak: normal;
+    speak-header: once;
+  }
+
+  .SS_Banner {
+    color: #373739;
+    font-size: 1.5em;
+    line-height: 1.1em;
+    padding-bottom: 0.28em;
+    border-bottom: 2px solid #0077cc;
+  }
+
+  .SS_bf {
+    margin-top: 2px;
+    font-weight: bold;
+    color: #333333;
+    font-family: verdana;
+  }
+
+  a.SS_ActiveRptr {
+    color: #cc0033;
+    cursor: default;
+    font-weight: bold;
+    speak: normal;
+    speak-header: once;
+    text-decoration: none;
+    font-family: verdana;
+  }
+
+  span.SS_NonPaginatedRptr {
+    color: #333333;
+    font-family: verdana;
+  }
+
+  a.SS_Rptr {
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: verdana;
+  }
+
+  .SS_InlineText {
+    display: inline;
+    margin-top: 0;
+  }
+
+  .SS_ib {
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  .SS_TopicTrail {
+    display: block;
+    font-size: 0.85em;
+    margin-left: 1em;
+  }
+
+  .SS_EditorialContent {
+    background-color: #f2f4fa;
+    display: block;
+    line-height: 1.2em;
+    padding: 0.5em;
+  }
+
+  .SS_SearchHit {
+    font-weight: bold;
+    background-color: #ffee7f;
+  }
+
+  .SS_SH {
+    font-weight: bold;
+    background-color: #ffee7f;
+  }
+
+  .SS_Highlight {
+    background-color: #ffee7f;
+    font-weight: bold;
+  }
+
+  .SS_CurrentHit {
+    background-color: #aadef3;
+    font-weight: bold;
+  }
+
+  .SS_contentdocument a {
+    text-decoration: underline;
+  }
+
+  .SS_Pag_Show {
+    font-weight: bold;
+  }
+
+  .SS_Pag_Hide {
+    display: none;
+  }
+
+  .SS_Pag_Active {
+    font-weight: bold;
+  }
+
+  .SS_Expandable {
+    display: inline-block;
+  }
+
+  .SS_Expandable {
+    border: solid 1px #cfcfcf;
+    font-weight: bold;
+    padding: 0.4em 0.4em;
+    font-size: 1em;
+  }
+
+  .SS_Expandable {
+    display: block;
+  }
+
+  .SS_Expandable:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  .SS_Expandable span {
+    float: left;
+  }
+
+  .SS_Expandable a {
+    float: right;
+    white-space: nowrap;
+  }
+
+  .SS_Expandable a span {
+    float: none;
+  }
+
+  .SS_Heading {
+    margin-top: 1em;
+    text-align: left;
+    background-color: #f4f4e9;
+    color: #333333;
+    font-family: verdana;
+  }
+
+  .SS_header {
+    margin-top: 2px;
+    text-align: left;
+    background-color: #f4f4e9;
+    color: #333333;
+    font-family: verdana;
+  }
+
+  .SS_PopupHdr {
+    color: #0000ff;
+    text-decoration: underline;
+  }
+
+  a.SS_PopupLink {
+    background-color: #e4f9df;
+    border: 1px solid #0b9c00;
+    font-weight: bold;
+    padding: 0 0.2em;
+  }
+
+  SS_TOCTrail {
+    display: none;
+    text-decoration: none;
+  }
+
+  .SS_TOCTrail li {
+    float: left;
+  }
+
+  .SS_TOCTrail li:after {
+    content: '>';
+    padding: 0 0.2em 0 0.2em;
+  }
+
+  .SS_TOCTrail li:last-child:after {
+    content: '';
+  }
+
+  .SS_TOCTrail li a {
+    color: #4c779b;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid grey;
+  }
+
+  .SS_ChangeAdd {
+    background-color: #d5f6cd;
+    border: 1px solid #95d585;
+  }
+
+  .SS_ChangeDelete {
+    color: #c03;
+    text-decoration: line-through;
+  }
+
+  .SS_ListNoIndent .SS_ListLabel {
+    min-width: 1.6em;
+  }
+
+  .SS_ListLabel,
+  .SS_StaticListLabel {
+    display: table-cell;
+    float: left;
+    margin: 0;
+    padding: 0 0 0 1em;
+    text-align: left;
+  }
+
+  ol,
+  ul {
+    list-style-type: none;
+  }
+
+  ul.SS_ListNoIndent {
+    list-style: none;
+    margin: 0 0 0 0;
+  }
+
+  .SS_Copyright {
+    font-size: 0.85em;
+  }
+
+  #TOCTrail {
+    display: inline-block;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 1.25em;
+  }
+
+  .iTOC {
+    text-align: center;
+    margin-top: 0px;
+    padding: 1px;
+    margin-bottom: 1em;
+  }
+
+  a:-webkit-any-link {
+    cursor: auto;
+  }
+
+  blockquote p {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  div.fixedHeader {
+    position: fixed;
+    margin: 0;
+    padding: 10px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#eeeeee),
+      to(#b7b7b7)
+    );
+  }
+
+  .highlighted {
+    font-weight: bold;
+    background-color: #ffff99;
+  }
+
+  .currentTerm {
+    font-weight: bold;
+    background-color: #87cefa;
+  }
+
+  #PartsSelect {
+    margin-left: 10px;
+  }
+
+  .shepSignal {
+    padding-right: 5px;
+    align: center;
+  }
+
+  ul.SS_NoStyleList {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    list-style-type: none;
+  }
+
+  li > ul.SS_NoStyleList {
+    width: 95%;
+    margin: 2 0 0 20;
+    overflow: auto;
+    list-style-type: none;
+  }
+
+  .scrubber {
+    display: none;
+  }
+
+  .folderMetadata {
+    text-align: right;
+  }
+
+  .folderMetadata hr {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  #metadataList {
+    text-align: left;
+    float: left;
+    padding: 0;
+    margin: 0;
+    font-family: verdana;
+    font-size: 11px;
+  }
+
+  #metadataList dt {
+    margin: 0 5px 0 0;
+    padding: 3px 0;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  #metadataList dd:first-of-type {
+    font-weight: bold;
+  }
+
+  #metadataList dd {
+    margin: 0;
+    padding: 3px 0;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  /* Book Browse classes */
+  #miniTocHeader {
+    font-size: 0.7em;
+    margin-bottom: 0.7em;
+    padding-bottom: 10px;
+  }
+
+  lx-split:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+  }
+
+  .lx-split .lx-center,
+  .lx-split span span,
+  .lx-split div span,
+  .lx-split a span {
+    float: none;
+  }
+
+  .lx-split .lx-left {
+    float: left;
+  }
+
+  .lx-right {
+    float: right;
+  }
+
+  #miniTocFooter {
+    font-size: 0.7em;
+    padding-top: 10px;
+    padding-bottom: 35px;
+  }
+
+  #miniTocHeader .lx-right,
+  #miniTocFooter .lx-right {
+    padding-right: 18px;
+  }
+
+  #miniTocHeader .lx-left,
+  #miniTocFooter .lx-left {
+    padding-left: 18px;
+  }
+
+  #HideShow_TableofContents.SS_HideShowText {
+    position: absolute;
+    left: -50000px;
+  }
+
+  #HideShow_TableofAuthorities.SS_HideShowText {
+    position: absolute;
+    left: -50000px;
+  }
+
+  .SS_DocTOCPageNo {
+    width: auto;
+    text-align: right;
+    right: 0px;
+    padding: 0.4em;
+    line-height: 1.2em;
+    overflow: hidden;
+    float: right;
+    position: absolute;
+  }
+
+  span.SS_LeftAlign:first-of-type {
+    display: block !important;
+  }
+
+  .SS_Form_Columns,
+  .SS_FullWidthList div.SS_Form_Columns {
+    margin: 1em 0;
+  }
+  .SS_Form_Column {
+    display: inline-block;
+    height: 100%;
+    padding: 10px;
+    vertical-align: middle;
+    width: 30%;
+  }
+  .SS_Form_LeftBrace {
+    border: 1px solid #999;
+    border-width: 1px 1px 1px 0;
+    width: 60%;
+  }
+  .SS_Form_RightBrace {
+    border: 1px solid #999;
+    border-width: 1px 0 1px 1px;
+    width: 60%;
+  }
+  .SS_Form_Input {
+    display: inline-block;
+    margin: 0 0 -2px 0;
+  }
+  .SS_Form_SolidBorder {
+    border-bottom: 1px solid #000;
+  }
+  .SS_Form_DotBorder {
+    border-bottom: 1px dotted #000;
+  }
+  .SS_Form_DashedBorder {
+    border-bottom: 1px dashed #000;
+  }
+  .SS_Form_DoubleBorder {
+    border-bottom: 3px double #000;
+  }
+
+  .SS_Comment {
+    border: 1px solid #ccc;
+    padding: 1.2rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .SS_SHowHide,
+  .SS_Hidden {
+    display: none;
+  }
+
+  .SS_latest {
+    font-weight: 700;
+    background-color: #14e4dc;
+  }
+
+  .SS_latest.textHighlight {
+    background-color: #01726e;
+    color: white;
+  }
+
+  .SS_Removed {
+    font-weight: normal;
+    background-color: transparent;
+  }
+
+  .SS_MLTH {
+    display: none;
+  }
+
+  .SS_HeadnoteSignal {
+    margin-left: 8px;
+    background-color: #ededed;
+    padding: 3px 10px 1px;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transition: 0.3s;
+  }
+
+  .keyword {
+    background-color: yellow;
+  }
+
+  .keyword-focus {
+    background-color: red;
+  }
+
+  .searchbar-input {
+    padding-left: 9px !important;
+  }
+
+  .toolbar-title {
+    text-overflow: unset;
+    white-space: unset;
+    font-size: 1em;
+  }
+
+  .night {
+    background-color: black;
+    color: white;
+  }
+
+  .day {
+    background-color: white;
+    color: black;
+  }
+
+  .single {
+    line-height: 1.2em;
+  }
+
+  .double {
+    line-height: 2em;
+  }
+}

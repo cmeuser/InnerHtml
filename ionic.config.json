@@ -1,5 +1,7 @@
 {
   "name": "InnerHtml",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
